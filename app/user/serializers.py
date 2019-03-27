@@ -4,7 +4,7 @@ from django.utils.translation import ugettext_lazy as _
 from rest_framework import serializers
 
 
-class UserSeralizer(serializers.ModelSerializer):
+class UserSerializer(serializers.ModelSerializer):
     """ Serailizes user objects """
 
     class Meta:
