@@ -12,8 +12,10 @@ from recipe.serializers import TagSerializer
 
 TAGS_URL = reverse('recipe:tag-list')
 
+
 def create_user(**params):
     return get_user_model().objects.create_user(**params)
+
 
 class PublicTagsAPITests(TestCase):
     """ test the publicly available tags API """

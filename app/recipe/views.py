@@ -5,6 +5,7 @@ from rest_framework.permissions import IsAuthenticated
 from core.models import Tag
 from recipe import serializers
 
+
 class TagViewSet(viewsets.GenericViewSet,
                  mixins.ListModelMixin,
                  mixins.CreateModelMixin):
@@ -21,4 +22,4 @@ class TagViewSet(viewsets.GenericViewSet,
     def perform_create(self, serializer):
         """Create new tag """
         serializer.save(user=self.request.user)
-        
+    
